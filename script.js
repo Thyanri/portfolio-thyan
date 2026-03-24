@@ -1,3 +1,18 @@
+// ===== TYPING EFFECT =====
+const typedName = document.getElementById('typed-name');
+const fullName = 'Rithyan Goncalves.';
+let charIndex = 0;
+
+function typeChar() {
+  if (charIndex < fullName.length) {
+    typedName.textContent += fullName[charIndex];
+    charIndex++;
+    setTimeout(typeChar, 80);
+  }
+}
+
+setTimeout(typeChar, 400);
+
 // ===== THEME TOGGLE =====
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
@@ -9,7 +24,6 @@ function setTheme(theme) {
   localStorage.setItem('theme', theme);
 }
 
-// Load saved theme
 const savedTheme = localStorage.getItem('theme') || 'dark';
 setTheme(savedTheme);
 
@@ -26,12 +40,25 @@ menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-// Close menu on link click
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('active');
   });
 });
+
+// ===== FADE IN ON SCROLL =====
+const fadeEls = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+fadeEls.forEach(el => observer.observe(el));
 
 // ===== CONTACT FORM =====
 const form = document.getElementById('contact-form');
@@ -46,7 +73,6 @@ form.addEventListener('submit', (e) => {
 
   if (!nome || !email || !mensagem) return;
 
-  // Simple email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) return;
 
@@ -54,7 +80,7 @@ form.addEventListener('submit', (e) => {
   successMsg.classList.remove('hidden');
 });
 
-// ===== SMOOTH SCROLL FOR NAV =====
+// ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     const target = document.querySelector(anchor.getAttribute('href'));

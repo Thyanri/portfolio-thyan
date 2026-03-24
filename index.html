@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rithyan | Portfólio</title>
+  <title>rithyan_ | portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -14,7 +17,7 @@
       <div class="nav-links">
         <a href="#sobre">sobre</a>
         <a href="#formacao">formacao</a>
-        <a href="#portfolio">portfolio</a>
+        <a href="#portfolio">projetos</a>
         <a href="#contato">contato</a>
         <button id="theme-toggle" aria-label="Alternar tema">
           <span id="theme-icon">☀</span>
@@ -29,11 +32,15 @@
     <!-- Hero -->
     <section id="hero">
       <div class="container">
-        <p class="hero-greeting">ola, eu sou</p>
-        <h1 class="hero-name">Rithyan Goncalves<span class="accent">.</span></h1>
-        <p class="hero-subtitle">estudante de tecnologia & desenvolvedor em formacao</p>
+        <p class="hero-greeting">// ola, eu sou</p>
+        <h1 class="hero-name">
+          <span id="typed-name"></span><span class="cursor-blink">|</span>
+        </h1>
+        <p class="hero-subtitle">estudante de tecnologia <span class="accent">&</span> desenvolvedor em formacao</p>
         <div class="hero-links">
-          <a href="https://github.com/Thyanri" target="_blank" class="btn">github</a>
+          <a href="https://github.com/Thyanri" target="_blank" class="btn">
+            <span class="btn-icon">&#9775;</span> github
+          </a>
           <a href="#contato" class="btn btn-outline">contato</a>
         </div>
       </div>
@@ -42,8 +49,8 @@
     <!-- Sobre -->
     <section id="sobre">
       <div class="container">
-        <h2 class="section-title"><span class="accent">#</span> sobre mim</h2>
-        <div class="about-content">
+        <h2 class="section-title"><span class="accent">//</span> sobre mim</h2>
+        <div class="about-content fade-in">
           <p>Me chamo <strong>Rithyan Goncalves de Araujo</strong>, sou estudante de tecnologia apaixonado por desenvolvimento web e programacao. Busco sempre aprender novas tecnologias e aprimorar minhas habilidades para criar solucoes criativas e eficientes.</p>
           <div class="skills">
             <span class="tag">html</span>
@@ -59,8 +66,8 @@
     <!-- Formacao -->
     <section id="formacao">
       <div class="container">
-        <h2 class="section-title"><span class="accent">#</span> formacao</h2>
-        <div class="timeline">
+        <h2 class="section-title"><span class="accent">//</span> formacao</h2>
+        <div class="timeline fade-in">
           <div class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
@@ -84,13 +91,13 @@
     <!-- Portfolio -->
     <section id="portfolio">
       <div class="container">
-        <h2 class="section-title"><span class="accent">#</span> portfolio</h2>
+        <h2 class="section-title"><span class="accent">//</span> projetos</h2>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card fade-in">
             <div class="project-header">
               <span class="project-icon">{ }</span>
               <div class="project-links">
-                <a href="https://github.com/Thyanri/portfolio-thyan" target="_blank">repo</a>
+                <a href="https://github.com/Thyanri/portfolio-thyan" target="_blank">repo &rarr;</a>
               </div>
             </div>
             <h3>portfolio-thyan</h3>
@@ -101,14 +108,14 @@
               <span>js</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card fade-in">
             <div class="project-header">
               <span class="project-icon">{ }</span>
               <div class="project-links">
-                <a href="https://github.com/Thyanri" target="_blank">repo</a>
+                <a href="https://github.com/Thyanri" target="_blank">github &rarr;</a>
               </div>
             </div>
-            <h3>em breve</h3>
+            <h3>em breve<span class="accent">_</span></h3>
             <p>Novos projetos estao sendo desenvolvidos. Acompanhe meu GitHub para novidades.</p>
             <div class="project-tags">
               <span>???</span>
@@ -121,9 +128,9 @@
     <!-- Contato -->
     <section id="contato">
       <div class="container">
-        <h2 class="section-title"><span class="accent">#</span> contato</h2>
-        <p class="contact-desc">Tem alguma pergunta ou proposta? Manda uma mensagem.</p>
-        <form id="contact-form">
+        <h2 class="section-title"><span class="accent">//</span> contato</h2>
+        <p class="contact-desc">Tem alguma pergunta ou proposta? Manda uma mensagem<span class="accent">.</span></p>
+        <form id="contact-form" class="fade-in">
           <div class="form-group">
             <input type="text" id="nome" placeholder="nome" required>
           </div>
@@ -133,10 +140,10 @@
           <div class="form-group">
             <textarea id="mensagem" placeholder="mensagem" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn">enviar</button>
+          <button type="submit" class="btn">enviar_</button>
         </form>
         <div id="form-success" class="hidden">
-          <p class="success-msg">mensagem enviada com sucesso<span class="accent">!</span></p>
+          <p class="success-msg">// mensagem enviada com sucesso<span class="accent">!</span></p>
         </div>
       </div>
     </section>
@@ -145,7 +152,7 @@
 
   <footer>
     <div class="container">
-      <p>feito por <a href="https://github.com/Thyanri" target="_blank">rithyan</a> <span class="accent">//</span> 2026</p>
+      <p>feito com <span class="accent">&lt;/&gt;</span> por <a href="https://github.com/Thyanri" target="_blank">rithyan</a> <span class="accent">//</span> 2026</p>
     </div>
   </footer>
 
